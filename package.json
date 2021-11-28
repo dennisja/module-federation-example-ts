@@ -1,0 +1,51 @@
+{
+  "name": "mono",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:dennisja/mono.git",
+  "author": "dennisja <dennisjjagwe@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "greet": "scripty",
+    "build": "scripty",
+    "clean": "scripty",
+    "lint": "scripty",
+    "test": "scripty",
+    "api-docs": "scripty",
+    "prepare": "yarn setup-scripty",
+    "setup-scripty": "chmod -R +x scripts"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
+    "@microsoft/api-documenter": "^7.12.7",
+    "@microsoft/api-extractor": "^7.13.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "commitlint": "^11.0.0",
+    "eslint": "^7.19.0",
+    "husky": "^4.3.8",
+    "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0"
+  },
+  "volta": {
+    "node": "14.15.4",
+    "yarn": "1.22.10"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
