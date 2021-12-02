@@ -1,0 +1,32 @@
+{
+  "name": "@mono/auth",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "api-report": "scripty",
+    "build": "scripty",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "lint": "scripty",
+    "test": "scripty",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.ts"
+  },
+  "scripty": {
+    "path": "../../scripts/packages"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.13",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "typescript": "^4.1.3",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

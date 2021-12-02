@@ -17,27 +17,39 @@
     "test": "scripty",
     "api-docs": "scripty",
     "prepare": "yarn setup-scripty",
-    "setup-scripty": "chmod -R +x scripts"
+    "setup-scripty": "chmod -R +x scripts",
+    "start:shell": ""
   },
   "scripty": {
     "path": "./scripts/workspace"
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/config-lerna-scopes": "^11.0.0",
     "@microsoft/api-documenter": "^7.12.7",
     "@microsoft/api-extractor": "^7.13.1",
+    "@types/node": "^16.11.11",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
+    "babel-plugin-macros": "^3.1.0",
     "commitlint": "^11.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.19.0",
     "husky": "^4.3.8",
     "lerna": "^3.22.1",
     "lerna-changelog": "^1.0.1",
+    "prettier": "^2.5.0",
     "rimraf": "^3.0.2",
-    "scripty": "^2.0.0"
+    "scripty": "^2.0.0",
+    "ts-node": "^10.4.0"
   },
   "volta": {
     "node": "14.15.4",

@@ -1,6 +1,35 @@
 {
   "presets": [
-    ["@babel/preset-env", { "targets": { "node": 10 } }],
-    "@babel/preset-typescript"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        },
+        "bugfixes": true
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "onlyRemoveTypeImports": true
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ],
+  "plugins": [
+    "macros",
+    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
   ]
 }
