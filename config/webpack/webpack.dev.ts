@@ -1,17 +1,15 @@
-import { Configuration } from 'webpack';
-import { merge } from 'webpack-merge';
-// import { PATHS } from './utils';
-import commonConfig from './webpack.common';
+import { Configuration } from "webpack";
+import { merge } from "webpack-merge";
+import commonConfig from "./webpack.common";
 
 const devConfig: Configuration = {
-  mode: 'development',
+  mode: "development",
 
-  devtool: 'eval-source-map',
+  devtool: "eval-source-map",
 
   // use webpack-dev-server to serve the files during development
   devServer: {
     historyApiFallback: true,
-    // static: PATHS.public,
     open: true,
     compress: true,
     hot: true,
@@ -24,12 +22,12 @@ const devConfig: Configuration = {
       {
         test: /\.s?css$/,
         use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: { sourceMap: true, importLoaders: 1, modules: false },
           },
-          { loader: 'sass-loader', options: { sourceMap: true } },
+          { loader: "sass-loader", options: { sourceMap: true } },
         ],
       },
     ],
